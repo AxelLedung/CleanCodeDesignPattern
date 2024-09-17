@@ -59,4 +59,8 @@ Val av sorteringstyp/algoritm - org.example.Strategy
 Kunna ångra det senaste ändringen - Memento
 
 
+Kolla på filips kod för att se hur han löste Factory. Factory kanske inte är rätt borde kanske använda Abstract Factory istället. Känns så konstigt att använda sig av FactoryPattern filen.
+Klara hittils: Singleton, Command.
+Implementeras just nu: Strategy.
+Ska implementeras: Factory(Någon typ av skapande för produkter.), Memento.
 
