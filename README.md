@@ -11,7 +11,7 @@ Builder för att kunna mata in vissa speciella specs annars gå till standard.
 
 Command för val av funktion i meny.
 Iterator för att lägga in olika sorteringsalternativ.
-Strategy för val av Iterator.
+org.example.Strategy för val av Iterator.
 
 User story 1:
 Välj vad du vill göra - Command
@@ -50,4 +50,13 @@ Observer för att notifiera när ett objekt är på rea?
 \\
 
 Employee MS
+
+
+Sortera bland böcker efter namn, författare, publiseringsdatum. QuickSort/selectionsort
+Välja vad du vill göra - Command
+Vilket typ av objekt vill du skapa? - Factory
+Val av sorteringstyp/algoritm - org.example.Strategy
+Kunna ångra det senaste ändringen - Memento
+
+
 
