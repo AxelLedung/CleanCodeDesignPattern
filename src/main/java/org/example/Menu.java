@@ -26,7 +26,12 @@ public class Menu {
 
         if (commands.containsKey(textInput)) {
             return commands.get(textInput);
-        } else {
+        }
+        else if (textInput.isBlank()) {
+            System.out.println("Returning to Main Menu.");
+            return null;
+        }
+        else {
             System.out.println("Invalid choice.");
             return null;
         }

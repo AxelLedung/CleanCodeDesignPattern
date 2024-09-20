@@ -8,6 +8,10 @@ import org.example.Command.SortCommands.SortByNameCommand;
 import org.example.Command.SortCommands.SortByProductTypeCommand;
 import org.example.Menu;
 import org.example.Singleton.ProductRepository;
+import org.example.Strategy.SortingStrategies.SortByCostStrategy;
+import org.example.Strategy.SortingStrategies.SortByIdStrategy;
+import org.example.Strategy.SortingStrategies.SortByNameStrategy;
+import org.example.Strategy.SortingStrategies.SortByProductName;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,10 +27,10 @@ public class ViewProductsCommand implements ICommand {
         sortMenuChoices.add("3. Sort by Cost");
         sortMenuChoices.add("4. Sort by Product type");
 
-        sortMenuCommands.put("1", () -> new Button(new SortByIdCommand())); //Sort by ID
-        sortMenuCommands.put("2", () -> new Button(new SortByNameCommand())); //Sort by Name
-        sortMenuCommands.put("3", () -> new Button(new SortByCostCommand())); //Sort by Cost
-        sortMenuCommands.put("4", () -> new Button(new SortByProductTypeCommand())); //Sort by Product type
+        sortMenuCommands.put("1", () -> new SortByIdStrategy().sort(productRepository.getProducts())); //Sort by ID
+        sortMenuCommands.put("2", () -> new SortByNameStrategy().sort(productRepository.getProducts())); //Sort by Name
+        sortMenuCommands.put("3", () -> new SortByCostStrategy().sort(productRepository.getProducts())); //Sort by Cost
+        sortMenuCommands.put("4", () -> new SortByProductName().sort(productRepository.getProducts())); //Sort by Product type
     }
     @Override
     public void execute() {
@@ -36,9 +40,5 @@ public class ViewProductsCommand implements ICommand {
         if (menu != null) {
             menu.execute();
         }
-        else {
-            System.out.println("Invalid choice.");
-        }
-
     }
 }

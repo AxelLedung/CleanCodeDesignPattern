@@ -41,8 +41,5 @@ public class AddProductCommand implements ICommand {
         if (menu != null) {
             menu.execute();
         }
-        else {
-            System.out.println("Invalid choice.");
-        }
     }
 }

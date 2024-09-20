@@ -1,23 +1,20 @@
-package org.example.Command.SortCommands;
+package org.example.Strategy.SortingStrategies;
 
-import org.example.Command.Button;
-import org.example.Command.ICommand;
 import org.example.Command.ProductCommands.ViewProductsCommand;
-import org.example.Singleton.ProductRepository;
 import org.example.Products.Product;
+import org.example.Singleton.ProductRepository;
+import org.example.Strategy.ISortStrategy;
 
-import javax.swing.text.View;
 import java.util.List;
 
-public class SortByIdCommand  implements ICommand {
+public class SortByIdStrategy implements ISortStrategy {
     ProductRepository productRepository = ProductRepository.getInstance();
     @Override
-    public void execute() {
+    public void sort(List<Product> products) {
         quickSortById(productRepository.getProducts(), 0, productRepository.getProducts().size() - 1);
         ViewProductsCommand viewProductsCommand = new ViewProductsCommand();
         viewProductsCommand.execute();
     }
-
     private static void quickSortById(List<Product> products, int low, int high) {
 
         if (low < high) {

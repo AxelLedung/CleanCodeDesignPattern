@@ -9,7 +9,6 @@ public class Algorithm {
         this.sortStrategy = sortStrategy;
     }
     public void sort() {
-        ProductRepository productRepository = ProductRepository.getInstance();
-        sortStrategy.sort(productRepository);
+
     }
 }

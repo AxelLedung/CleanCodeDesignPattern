@@ -1,16 +1,16 @@
-package org.example.Command.SortCommands;
+package org.example.Strategy.SortingStrategies;
 
-import org.example.Command.ICommand;
 import org.example.Command.ProductCommands.ViewProductsCommand;
 import org.example.Products.Product;
 import org.example.Singleton.ProductRepository;
+import org.example.Strategy.ISortStrategy;
 
 import java.util.List;
 
-public class SortByCostCommand implements ICommand {
+public class SortByCostStrategy implements ISortStrategy {
     ProductRepository productRepository = ProductRepository.getInstance();
     @Override
-    public void execute() {
+    public void sort(List<Product> products) {
         insertionSortByCost(productRepository.getProducts());
         ViewProductsCommand viewProductsCommand = new ViewProductsCommand();
         viewProductsCommand.execute();

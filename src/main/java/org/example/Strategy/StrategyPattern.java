@@ -1,9 +1,5 @@
 package org.example.Strategy;
 
-import org.example.Command.ICommand;
-import org.example.Strategy.SortingStrategies.InsertionSortStrategy;
-import org.example.Strategy.SortingStrategies.QuickSortStrategy;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -14,13 +10,6 @@ public class StrategyPattern {
     ArrayList<String> choices = new ArrayList<>();
     HashMap<String, ISortStrategy> commandHashMap = new HashMap<>();
 
-    public StrategyPattern() {
-        choices.add("1. Quick sort.");
-        choices.add("2. Insertion sort.");
-
-        commandHashMap.put("1", (productRepository) -> new QuickSortStrategy());
-        commandHashMap.put("2", (productRepository) -> new InsertionSortStrategy());
-    }
     public void menu() {
         System.out.println("Choose sorting algorithm.");
         for (String choice: choices) {
@@ -29,7 +18,7 @@ public class StrategyPattern {
 
         String input = scanner.nextLine();
         Algorithm algorithm = new Algorithm();
-        algorithm.setSortStrategy(new QuickSortStrategy());
+
         if (commandHashMap.containsKey(input)) {
             algorithm.setSortStrategy(commandHashMap.get(input));
         }

@@ -31,10 +31,7 @@ public class DeleteProductCommand implements ICommand {
         var menu = deleteMenu.showMenu();
         if (menu != null) {
             menu.execute();
-        }
-        else {
-            System.out.println("Invalid choice.");
-        }
 
+        }
     }
 }
