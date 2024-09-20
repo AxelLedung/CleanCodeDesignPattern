@@ -1,13 +1,14 @@
 package org.example.Strategy.SortingStrategies;
 
+import org.example.Singleton.ProductRepository;
 import org.example.Strategy.ISortStrategy;
 
 public class InsertionSortStrategy implements ISortStrategy {
     @Override
-    public void sort() {
+    public void sort(ProductRepository productRepository) {
         System.out.println("sorting by InsertionSort.");
     }
-    void sortById(int[] arrayToSort){
+    public void sortById(int[] arrayToSort){
         for(int i = 1; i < arrayToSort.length; i++){
             int temp = arrayToSort[i];
             int j=i;
@@ -18,7 +19,7 @@ public class InsertionSortStrategy implements ISortStrategy {
             arrayToSort[j] = temp;
         }
     }
-    void sortByName(int[] arrayToSort){
+    public void sortByName(int[] arrayToSort){
         for(int i = 1; i < arrayToSort.length; i++){
             int temp = arrayToSort[i];
             int j=i;
@@ -29,7 +30,7 @@ public class InsertionSortStrategy implements ISortStrategy {
             arrayToSort[j] = temp;
         }
     }
-    void sortByCost(int[] arrayToSort){
+    public void sortByCost(int[] arrayToSort){
         for(int i = 1; i < arrayToSort.length; i++){
             int temp = arrayToSort[i];
             int j=i;

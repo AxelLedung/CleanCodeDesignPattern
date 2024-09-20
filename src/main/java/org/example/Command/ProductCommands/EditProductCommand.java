@@ -1,4 +1,4 @@
-package org.example.Command.Commands;
+package org.example.Command.ProductCommands;
 
 import org.example.Command.ICommand;
 

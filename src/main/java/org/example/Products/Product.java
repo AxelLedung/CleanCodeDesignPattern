@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Products;
 
 public class Product {
     int id;

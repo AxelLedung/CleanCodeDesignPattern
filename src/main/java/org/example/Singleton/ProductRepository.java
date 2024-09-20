@@ -1,6 +1,6 @@
 package org.example.Singleton;
 
-import org.example.Product;
+import org.example.Products.Product;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,13 @@ public class ProductRepository {
 
     public void addProduct(Product product) {
         products.add(product);
-        System.out.println("Product added: " + product.getId() + "," + product.getName() + "," + product.getCost());
+        System.out.println(product.getClass().getSimpleName() + " added: " + product.getId() + "," + product.getName() + "," + product.getCost());
+    }
+    public boolean editProduct(Product product) {
+        return true;
+    }
+    public boolean deleteProduct(Product product) {
+        return true;
     }
 
     public List<Product> getProducts() {

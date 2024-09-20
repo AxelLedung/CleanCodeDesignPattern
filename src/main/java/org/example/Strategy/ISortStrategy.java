@@ -1,14 +1,7 @@
 package org.example.Strategy;
 
+import org.example.Singleton.ProductRepository;
+
 public interface ISortStrategy {
-    void sort();
-    abstract void sortById();
-    abstract void sortByName();
-    abstract void sortByCost();
-
-    void sortById(int[] arrayToSort, int start, int end);
-
-    void sortByName(int[] arrayToSort, int start, int end);
-
-    void sortByCost(int[] arrayToSort, int start, int end);
+    void sort(ProductRepository productRepository);
 }

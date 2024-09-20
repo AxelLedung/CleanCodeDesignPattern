@@ -1,9 +1,9 @@
 package org.example.Command;
 
-import org.example.Command.Commands.AddProductCommand;
-import org.example.Command.Commands.DeleteProductCommand;
-import org.example.Command.Commands.EditProductCommand;
-import org.example.Command.Commands.ViewProductsCommand;
+import org.example.Command.ProductCommands.AddProductCommand;
+import org.example.Command.ProductCommands.DeleteProductCommand;
+import org.example.Command.ProductCommands.EditProductCommand;
+import org.example.Command.ProductCommands.ViewProductsCommand;
 
 import java.util.ArrayList;
 import java.util.HashMap;
