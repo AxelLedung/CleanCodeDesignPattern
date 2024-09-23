@@ -31,12 +31,33 @@ public class AddProductCommand implements ICommand {
         String input;
         System.out.println("You are adding a product:");
         Menu addMenu = new Menu("Choose product type:", productTypeChoices, productTypeCommands);
+
         System.out.println("Input ID:");
-        productId = Integer.parseInt(scanner.nextLine());
+        input = scanner.nextLine();
+        if (!input.isEmpty()) {
+            productId = Integer.parseInt(input);
+        }
+        else {
+            return;
+        }
+
         System.out.println("Input name:");
-        productName = scanner.nextLine();
+        input = scanner.nextLine();
+        if (!input.isEmpty()) {
+            productName = input;
+        }
+        else {
+            return;
+        }
+
         System.out.println("Input cost:");
-        productCost = Integer.parseInt(scanner.nextLine());
+        input = scanner.nextLine();
+        if (!input.isEmpty()) {
+            productCost = Integer.parseInt(input);
+        }
+        else {
+            return;
+        }
         var menu = addMenu.showMenu();
         if (menu != null) {
             menu.execute();

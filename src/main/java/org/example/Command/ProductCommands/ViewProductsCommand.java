@@ -1,11 +1,6 @@
 package org.example.Command.ProductCommands;
 
-import org.example.Command.Button;
 import org.example.Command.ICommand;
-import org.example.Command.SortCommands.SortByCostCommand;
-import org.example.Command.SortCommands.SortByIdCommand;
-import org.example.Command.SortCommands.SortByNameCommand;
-import org.example.Command.SortCommands.SortByProductTypeCommand;
 import org.example.Menu;
 import org.example.Singleton.ProductRepository;
 import org.example.Strategy.SortingStrategies.SortByCostStrategy;

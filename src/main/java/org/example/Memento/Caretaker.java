@@ -1,16 +1,20 @@
 package org.example.Memento;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
 
 public class Caretaker {
-    private List<Memento> mementoList = new ArrayList<>();
+    private LinkedList<Memento> previous = new LinkedList<>();
 
-    public void saveState(Memento memento) {
-        mementoList.add(memento);
+    public void push(Memento memento) {
+        previous.push(memento);
     }
-
-    public Memento getMemento(int index) {
-        return mementoList.get(index);
+    public Memento pop() {
+        if (!previous.isEmpty()) {
+            return previous.pop();
+        }
+        else {
+            System.out.println("No products to restore.");
+            return null;
+        }
     }
 }

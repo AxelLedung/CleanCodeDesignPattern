@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.Command.ICommand;
+import org.example.Command.ProductCommands.ReturnToMainMenuCommand;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,11 +30,11 @@ public class Menu {
         }
         else if (textInput.isBlank()) {
             System.out.println("Returning to Main Menu.");
-            return null;
+            return new ReturnToMainMenuCommand();
         }
         else {
             System.out.println("Invalid choice.");
-            return null;
+            return new ReturnToMainMenuCommand();
         }
     }
 }

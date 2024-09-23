@@ -2,18 +2,13 @@ package org.example.Command.ProductCommands;
 
 import org.example.Command.ICommand;
 import org.example.Menu;
-import org.example.Products.HardwareProduct;
 import org.example.Products.Product;
-import org.example.Products.SoftwareProduct;
 import org.example.Singleton.ProductRepository;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class DeleteProductCommand implements ICommand {
-    String input;
-    Scanner scanner = new Scanner(System.in);
     ArrayList<String> productChoices = new ArrayList<>();
     HashMap<String, ICommand> productCommands = new HashMap<>();
 

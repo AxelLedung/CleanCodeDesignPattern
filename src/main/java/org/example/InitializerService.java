@@ -3,6 +3,7 @@ package org.example;
 import org.example.Command.Button;
 import org.example.Command.ProductCommands.AddProductCommand;
 import org.example.Command.ProductCommands.DeleteProductCommand;
+import org.example.Command.ProductCommands.RestoreProductCommand;
 import org.example.Command.ProductCommands.ViewProductsCommand;
 import org.example.Command.ICommand;
 import org.example.Factory.HardwareProductFactory;
@@ -15,16 +16,9 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class InitializerService {
-    private Scanner scanner = new Scanner(System.in);
 
     private ArrayList<String> mainMenuChoices = new ArrayList<>();
     private HashMap<String, ICommand> mainMenuCommands = new HashMap<>();
-    private ArrayList<String> productTypeChoices = new ArrayList<>();
-    private HashMap<String, ICommand> productTypeCommands = new HashMap<>();
-    private ArrayList<String> sortMenuChoices = new ArrayList<>();
-    private HashMap<String, ICommand> sortMenuCommands = new HashMap<>();
-    private ArrayList<String> sortAlgorithmChoices = new ArrayList<>();
-    private HashMap<String, ICommand> sortAlgorthmCommands = new HashMap<>();
 
     private HardwareProductFactory hardwareProductFactory = new HardwareProductFactory();
     private SoftwareProductFactory softwareProductFactory = new SoftwareProductFactory();
@@ -50,10 +44,12 @@ public class InitializerService {
         mainMenuChoices.add("1. View Products.");
         mainMenuChoices.add("2. Add Product.");
         mainMenuChoices.add("3. Delete Product");
+        mainMenuChoices.add("4. Restore recently deleted Product.");
 
         mainMenuCommands.put("1", () -> new Button(new ViewProductsCommand()).pressButton()); //View Products
         mainMenuCommands.put("2", () -> new Button(new AddProductCommand()).pressButton()); //Add Products
         mainMenuCommands.put("3", () -> new Button(new DeleteProductCommand()).pressButton()); //Delete Product
+        mainMenuCommands.put("4", () -> new Button(new RestoreProductCommand()).pressButton()); //Restore deleted product
     }
     public void run() {
         while(true) {
