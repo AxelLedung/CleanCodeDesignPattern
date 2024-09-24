@@ -7,7 +7,7 @@ import org.example.Strategy.ISortStrategy;
 
 import java.util.List;
 
-public class SortByProductName implements ISortStrategy {
+public class SortByProductClass implements ISortStrategy {
     ProductRepository productRepository = ProductRepository.getInstance();
     @Override
     public void sort(List<Product> products) {

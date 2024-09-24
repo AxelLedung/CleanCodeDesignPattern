@@ -6,7 +6,7 @@ import org.example.Singleton.ProductRepository;
 import org.example.Strategy.SortingStrategies.SortByCostStrategy;
 import org.example.Strategy.SortingStrategies.SortByIdStrategy;
 import org.example.Strategy.SortingStrategies.SortByNameStrategy;
-import org.example.Strategy.SortingStrategies.SortByProductName;
+import org.example.Strategy.SortingStrategies.SortByProductClass;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,7 +25,7 @@ public class ViewProductsCommand implements ICommand {
         sortMenuCommands.put("1", () -> new SortByIdStrategy().sort(productRepository.getProducts())); //Sort by ID
         sortMenuCommands.put("2", () -> new SortByNameStrategy().sort(productRepository.getProducts())); //Sort by Name
         sortMenuCommands.put("3", () -> new SortByCostStrategy().sort(productRepository.getProducts())); //Sort by Cost
-        sortMenuCommands.put("4", () -> new SortByProductName().sort(productRepository.getProducts())); //Sort by Product type
+        sortMenuCommands.put("4", () -> new SortByProductClass().sort(productRepository.getProducts())); //Sort by Product type
     }
     @Override
     public void execute() {
