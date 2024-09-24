@@ -1,66 +1,15 @@
-Clean Code Design Pattern turnin!
+Clean Code Design Pattern Inlämningsuppgift:
 
-1 Creational Factory/Builder för skapande av vissa typer av fordon.
+Applikation:
+Produkthanteringsystem
 
-Tyska bilar.
-
-Gör 5 kategorier, Audi, Volkswagen, Porsche, BMW, Mercedes
-
-Builder för att kunna mata in vissa speciella specs annars gå till standard.
-
-
-Command för val av funktion i meny.
-Iterator för att lägga in olika sorteringsalternativ.
-org.example.Strategy för val av Iterator.
-
-User story 1:
-Välj vad du vill göra - Command
-Välj visa bilar - Commmand
-Hur vill du visa upp bilarna - S trategy
-Visa upp bilarna efter en viss Iterator (Sorteringalgoritm) - Iterator
-
-User story 2:
-Välj vad du vill göra - Command
-Skapa en ny bil - Command
-Vilken typ av bil vill du skapa - Factory
-Vad vill du ska finnas i bilen - Builder
-
-Quick sort - Sorteringsalgoritm.
-
-
-
-
-Förslag:
-Library
-
-Build a car
-
-Shop
-
-Create a dish
-//
-Product MS
-
+Design Patterns:
+Factory Method
+Singleton
+Memento
+Strategy
 Command
 
-Factory Skapa olika typer av produkter
-
-Memento Undo the product changes
-Observer för att notifiera när ett objekt är på rea?
-\\
-
-Employee MS
-
-
-Sortera bland böcker efter namn, författare, publiseringsdatum. QuickSort/selectionsort
-Välja vad du vill göra - Command
-Vilket typ av objekt vill du skapa? - Factory
-Val av sorteringstyp/algoritm - org.example.Strategy
-Kunna ångra det senaste ändringen - Memento
-
-
-Kolla på filips kod för att se hur han löste Factory. Factory kanske inte är rätt borde kanske använda Abstract Factory istället. Känns så konstigt att använda sig av FactoryPattern filen.
-Klara hittils: Singleton, Command.
-Implementeras just nu: Strategy.
-Ska implementeras: Factory(Någon typ av skapande för produkter.), Memento.
-
+Sorteringsalgoritmer:
+Quicksort
+Insertionsort
