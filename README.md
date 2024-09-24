@@ -1,15 +1,19 @@
 # Clean Code Design Pattern Inlämningsuppgift:
 
-Applikation:
+## Applikation:
 Produkthanteringsystem
 
-Design Patterns:
+## Design Patterns:
 Factory Method
+
 Singleton
+
 Memento
+
 Strategy
+
 Command
 
-Sorteringsalgoritmer:
+## Sorteringsalgoritmer:
 Quicksort
 Insertionsort
